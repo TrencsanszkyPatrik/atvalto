@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Méter</p>
+    <input id="osszeg" type="text" /> <br /><br />
+
+    <select id="selectid" name="selectname" onchange="jsfunc1()">
+      <option value="val1" id="valid1"> Kilométer </option>
+      <option value="val2" id="valid2"> Deciméter </option>
+      <option value="val3" id="valid3"> Mérföld </option>
+    </select>
+    <br /><br />
+    <button onclick="asd()">Átváltás</button>
+
+    <script>
+      function asd() {
+        var fasz = document.getElementById("selectid");
+        var km = 0.001;
+        var dm = 10;
+        var mile = 0.000621371192;
+        var osszeg = document.getElementById("osszeg").value;
+        var m_km = km * osszeg;
+        var m_dm = dm * osszeg;
+        var m_m = mile * osszeg
+
+          if (fasz.value == "val1") {
+            alert(m_km);
+          } else if (fasz.value == "val2"){
+              alert(m_dm)
+          } else if (fasz.value == "val3"){
+              alert(m_m)
+          }
+
+      }
+    </script>
+
+  </body>
+</html>
